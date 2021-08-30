@@ -2,8 +2,11 @@ import java.util.*;
 
 class StringCalculator
 {
+	static int cnt = 0;
 	static int Add(String numbers)
 	{
+		cnt += GetCalledCount(); // how many time Add() was called
+		
 		if(numbers.equals("")){
 			return 0;
 		}
@@ -32,6 +35,12 @@ class StringCalculator
 		}
 	}
 	
+	static int GetCalledCount()
+	{
+		return 1;
+	}
+
+	
 	public static void main(String args[])
 	{
 		int ans;
@@ -49,7 +58,7 @@ class StringCalculator
 		System.out.println(ans);
 		ans = Add("//;\n1;2");
 		System.out.println(ans);
-		ans = Add("-1");
+		ans = Add("1,2,-3,-4");
 		System.out.println(ans);
 	}
 }
