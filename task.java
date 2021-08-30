@@ -28,6 +28,9 @@ class StringCalculator
 				if(val < 0){
 					throw new IllegalArgumentException("Negatives not allowed:");
 				}
+				if(val > 1000){
+					val = 0;
+				}
 				sum += val;
 			}
 			
@@ -57,6 +60,8 @@ class StringCalculator
 		ans = Add("1\n2,3");
 		System.out.println(ans);
 		ans = Add("//;\n1;2");
+		System.out.println(ans);
+		ans = Add("1001,2");
 		System.out.println(ans);
 		ans = Add("1,2,-3,-4");
 		System.out.println(ans);
