@@ -22,6 +22,9 @@ class StringCalculator
 			
 			for(int i=0; i<l; i++){
 				int val = Integer.parseInt(numList[i]);
+				if(val < 0){
+					throw new IllegalArgumentException("Negatives not allowed:");
+				}
 				sum += val;
 			}
 			
@@ -45,6 +48,8 @@ class StringCalculator
 		ans = Add("1\n2,3");
 		System.out.println(ans);
 		ans = Add("//;\n1;2");
+		System.out.println(ans);
+		ans = Add("-1");
 		System.out.println(ans);
 	}
 }
