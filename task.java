@@ -9,7 +9,7 @@ class StringCalculator
 		}
 		else
 		{
-		    String numList[] = numbers.split(",");
+		    String numList[] = numbers.split("[,\n]");
 			
 			int l = numList.length;
 			int sum = 0;
@@ -35,6 +35,8 @@ class StringCalculator
 		ans = Add("1,2");
 		System.out.println(ans);
 		ans = Add("1,2,3,5");
+		System.out.println(ans);
+		ans = Add("1\n2,3\n4");
 		System.out.println(ans);
 	}
 }
