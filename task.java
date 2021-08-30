@@ -34,5 +34,7 @@ class StringCalculator
 		System.out.println(ans);
 		ans = Add("1,2");
 		System.out.println(ans);
+		ans = Add("1,2,3,5");
+		System.out.println(ans);
 	}
 }
